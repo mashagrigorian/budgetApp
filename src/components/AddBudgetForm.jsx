@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 // rrd imports
 import { Form, useFetcher } from "react-router-dom";
 
-//library imports
+// library imports
 import { CurrencyDollarIcon } from "@heroicons/react/24/solid";
 
 const AddBudgetForm = () => {
@@ -40,7 +40,9 @@ const AddBudgetForm = () => {
           <label htmlFor="newBudgetAmount">Amount</label>
           <input
             type="number"
-            step="0.01"
+            step="1"
+            onkeypress="return event.charCode >= 48"
+            min="1"
             name="newBudgetAmount"
             id="newBudgetAmount"
             placeholder="e.g., $350"

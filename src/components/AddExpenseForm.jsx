@@ -48,7 +48,9 @@ const AddExpenseForm = ({ budgets }) => {
             <label htmlFor="newExpenseAmount">Amount</label>
             <input
               type="number"
-              step="0.01"
+              step="1"
+              onkeypress="return event.charCode >= 48"
+              min="1"
               inputMode="decimal"
               name="newExpenseAmount"
               id="newExpenseAmount"
