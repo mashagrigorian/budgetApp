@@ -41,7 +41,6 @@ const AddBudgetForm = () => {
           <input
             type="number"
             step="1"
-            onkeypress="return event.charCode >= 48"
             min="1"
             name="newBudgetAmount"
             id="newBudgetAmount"
